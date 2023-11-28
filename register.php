@@ -58,9 +58,14 @@ if (isset($_POST["submit"])) {
         if ($prepareStmt) {
             mysqli_stmt_bind_param($stmt, "sss", $fullName, $username, $passwordHash);
             mysqli_stmt_execute($stmt);
-            echo "<div class='alert alert-success'>Anda berhasil registrasi.</div>";
-			// JavaScript alert 
-            echo "<script>alert('Anda Berhasil Registrasi!');</script>";
+            
+			 // Set success message in session variable
+			 $_SESSION['success_message'] = "Anda berhasil registrasi.";
+
+			 // Redirect to login page
+			 header("Location: login.php");
+			 exit();
+
         } else {
             die("Something went wrong");
         }

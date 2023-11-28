@@ -9,6 +9,16 @@ if (isset($_SESSION["user"])) {
     exit;
 }
 
+// Check if success message is set
+if (isset($_SESSION['success_message'])) {
+        echo "<div class='alert alert-success'>{$_SESSION['success_message']}</div>";
+    // JavaScript alert 
+        echo "<script>alert('Anda Berhasil Registrasi!');</script>";
+        
+    // Clear the session variable
+    unset($_SESSION['success_message']);
+}
+
 if (isset($_POST["login"])) {
     $username = $_POST["username"];
     $password = $_POST["password"];
