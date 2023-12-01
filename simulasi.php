@@ -93,98 +93,98 @@ echo "
 <hr>
 ";
 
-echo "<br>
-<table class='table table-bordered' style='font-size:18px;text-align:center'>
-  <tr style='background-color:#17a2b8;color:#fff'>
-    <th>Jumlah True</th>
-    <th>Jumlah False</th>
-    <th>Jumlah Total Data</th>
-  </tr>
-  <tr>
-    <td>$jumTrue</td>
-    <td>$jumFalse</td>
-    <td>$jumData</td>
-  </tr>
-</table>
-";
+// echo "<br>
+// <table class='table table-bordered' style='font-size:18px;text-align:center'>
+//   <tr style='background-color:#17a2b8;color:#fff'>
+//     <th>Jumlah True</th>
+//     <th>Jumlah False</th>
+//     <th>Jumlah Total Data</th>
+//   </tr>
+//   <tr>
+//     <td>$jumTrue</td>
+//     <td>$jumFalse</td>
+//     <td>$jumData</td>
+//   </tr>
+// </table>
+// ";
 
-echo "<br>
-<table class='table table-bordered' style='font-size:18px;text-align:center'>
-  <tr style='background-color:#17a2b8;color:#fff'>
-    <th></th>
-    <th>True</th>
-    <th>False</th>
-  </tr>
-  <tr>
-    <td>pA</td>
-    <td>$jumTrue / $jumData</td>
-    <td>$jumFalse / $jumData</td>
-  </tr>
-  <tr>
-    <td>Jenis Kelamin</td>
-    <td>$jk / $jumTrue</td>
-    <td>$jk2 / $jumFalse</td>
-  </tr>
-  <tr>
-    <td>Beasiswa</td>
-    <td>$bea / $jumTrue</td>
-    <td>$bea2 / $jumFalse</td>
-  </tr>
-  <tr>
-    <td>IP Semester 1</td>
-    <td>$ips1 / $jumTrue</td>
-    <td>$ips1_2 / $jumFalse</td>
-  </tr>
-  <tr>
-    <td>IP Semester 2</td>
-    <td>$ips2 / $jumTrue</td>
-    <td>$ips2_2 / $jumFalse</td>
-  </tr>
-  <tr>
-    <td>IP Semester 3</td>
-    <td>$ips3 / $jumTrue</td>
-    <td>$ips3_2 / $jumFalse</td>
-  </tr>
-  <tr>
-    <td>IP Semester 4</td>
-    <td>$ips4 / $jumTrue</td>
-    <td>$ips4_2 / $jumFalse</td>
-  </tr>
-  <tr>
-    <td>IP Semester 5</td>
-    <td>$ips5 / $jumTrue</td>
-    <td>$ips5_2 / $jumFalse</td>
-  </tr>
-  <tr>
-    <td>IP Kumulatif</td>
-    <td>$ipk / $jumTrue</td>
-    <td>$ipk_2 / $jumFalse</td>
-  </tr>
-</table>
-";
+// echo "<br>
+// <table class='table table-bordered' style='font-size:18px;text-align:center'>
+//   <tr style='background-color:#17a2b8;color:#fff'>
+//     <th></th>
+//     <th>True</th>
+//     <th>False</th>
+//   </tr>
+//   <tr>
+//     <td>pA</td>
+//     <td>$jumTrue / $jumData</td>
+//     <td>$jumFalse / $jumData</td>
+//   </tr>
+//   <tr>
+//     <td>Jenis Kelamin</td>
+//     <td>$jk / $jumTrue</td>
+//     <td>$jk2 / $jumFalse</td>
+//   </tr>
+//   <tr>
+//     <td>Beasiswa</td>
+//     <td>$bea / $jumTrue</td>
+//     <td>$bea2 / $jumFalse</td>
+//   </tr>
+//   <tr>
+//     <td>IP Semester 1</td>
+//     <td>$ips1 / $jumTrue</td>
+//     <td>$ips1_2 / $jumFalse</td>
+//   </tr>
+//   <tr>
+//     <td>IP Semester 2</td>
+//     <td>$ips2 / $jumTrue</td>
+//     <td>$ips2_2 / $jumFalse</td>
+//   </tr>
+//   <tr>
+//     <td>IP Semester 3</td>
+//     <td>$ips3 / $jumTrue</td>
+//     <td>$ips3_2 / $jumFalse</td>
+//   </tr>
+//   <tr>
+//     <td>IP Semester 4</td>
+//     <td>$ips4 / $jumTrue</td>
+//     <td>$ips4_2 / $jumFalse</td>
+//   </tr>
+//   <tr>
+//     <td>IP Semester 5</td>
+//     <td>$ips5 / $jumTrue</td>
+//     <td>$ips5_2 / $jumFalse</td>
+//   </tr>
+//   <tr>
+//     <td>IP Kumulatif</td>
+//     <td>$ipk / $jumTrue</td>
+//     <td>$ipk_2 / $jumFalse</td>
+//   </tr>
+// </table>
+// ";
 
-echo "<br>
-  <table class='table table-bordered' style='font-size:18px;text-align:center;'>
-    <tr style='background-color:#17a2b8;color:#fff'>
-      <th>Presentasi Lulus Tepat Waktu</th>
-      <th>Presentasi Tidak Lulus Tepat Waktu</th>
-    </tr>
-    <tr>
-      <td>$paT</td>
-      <td>$paF</td>
-    </tr>
-  </table>
-";
+// echo "<br>
+//   <table class='table table-bordered' style='font-size:18px;text-align:center;'>
+//     <tr style='background-color:#17a2b8;color:#fff'>
+//       <th>Presentasi Lulus Tepat Waktu</th>
+//       <th>Presentasi Tidak Lulus Tepat Waktu</th>
+//     </tr>
+//     <tr>
+//       <td>$paT</td>
+//       <td>$paF</td>
+//     </tr>
+//   </table>
+// ";
 
 $result = $obj->perbandingan($paT,$paF);
 
 if($paT > $paF){
-  echo "<br>
-  <h3 class='tebal'>PRESENTASI <span class='badge badge-success' style='padding:10px'><b>LULUS TEPAT WAKTU</b></span> LEBIH BESAR DARI PADA PRESENTASI TIDAK LULUS TEPAT WAKTU</h3><br>";
+  // echo "<br>
+  // <h3 class='tebal'>PRESENTASI <span class='badge badge-success' style='padding:10px'><b>LULUS TEPAT WAKTU</b></span> LEBIH BESAR DARI PADA PRESENTASI TIDAK LULUS TEPAT WAKTU</h3><br>";
   echo "<h4><br>Presentasi lulus tepat waktu sebanyak : <b>".round($result[1],2)." %</b> <br>Presentasi tidak lulus tepat waktu sebanyak : <b>".round($result[2],2)." % </b></h4>";
 }else if($paF > $paT){
-  echo "<br>
-  <h3 class='tebal'>PRESENTASI <span class='badge badge-danger' style='padding:10px'><b>TIDAK LULUS TEPAT WAKTU</b></span> LEBIH BESAR DARI PADA PRESENTASI LULUS TEPAT WAKTU</h3><br>";
+  // echo "<br>
+  // <h3 class='tebal'>PRESENTASI <span class='badge badge-danger' style='padding:10px'><b>TIDAK LULUS TEPAT WAKTU</b></span> LEBIH BESAR DARI PADA PRESENTASI LULUS TEPAT WAKTU</h3><br>";
   echo "<h4><br>Presentasi tidak lulus tepat waktu sebanyak : <b>".round($result[1],2)." %</b> <br>Presentasi lulus tepat waktu sebanyak : <b>".round($result[2],2)." % </b></h4>";
 }
 
