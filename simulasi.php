@@ -23,12 +23,109 @@ $jumData = $obj->sumData();
 $nama = $_SESSION["user"]["full_name"];
 $a1 = $_POST['jenis_kelamin'];
 $a2 = $_POST['beasiswa'];
-$a3 = $_POST['ips_1'];
-$a4 = $_POST['ips_2'];
-$a5 = $_POST['ips_3'];
-$a6 = $_POST['ips_4'];
-$a7 = $_POST['ips_5'];
-$a8 = $_POST['ip_kumulatif'];
+// $a3 = $_POST['ips_1'];
+// $a4 = $_POST['ips_2'];
+// $a5 = $_POST['ips_3'];
+// $a6 = $_POST['ips_4'];
+// $a7 = $_POST['ips_5'];
+// $a8 = $_POST['ip_kumulatif'];
+
+// IPS 1
+  if ($_POST['ips_1'] > 4) {
+    echo "<p style='color:red;'>Error: IP Semester 1 tidak valid</p>";
+    return false;
+  } elseif ($_POST['ips_1'] > 3.5) {
+    $a3 = "A";
+  } elseif ($_POST['ips_1'] >= 3 && $_POST['ips_1'] <= 3.5) {
+    $a3 = "B";
+  } elseif ($_POST['ips_1'] >= 2.5 && $_POST['ips_1'] < 3) {
+    $a3 = "C";
+  } elseif ($_POST['ips_1'] >= 2 && $_POST['ips_1'] < 2.5) {
+    $a3 = "D";
+  } elseif ($_POST['ips_1'] < 2) {
+    $a3 = "E";
+  }
+
+// IPS 2
+  if ($_POST['ips_2'] > 4) {
+    echo "<p style='color:red;'>Error: IP Semester 2 tidak valid</p>";
+    return false;
+  } elseif ($_POST['ips_2'] > 3.5) {
+    $a4 = "A";
+  } elseif ($_POST['ips_2'] >= 3 && $_POST['ips_2'] <= 3.5) {
+    $a4 = "B";
+  } elseif ($_POST['ips_2'] >= 2.5 && $_POST['ips_2'] < 3) {
+    $a4 = "C";
+  } elseif ($_POST['ips_2'] >= 2 && $_POST['ips_2'] < 2.5) {
+    $a4 = "D";
+  } elseif ($_POST['ips_2'] < 2) {
+    $a4 = "E";
+  }
+
+// IPS 3
+  if ($_POST['ips_3'] > 4) {
+    echo "<p style='color:red;'>Error: IP Semester 3 tidak valid</p>";
+    return false;
+  } elseif ($_POST['ips_3'] > 3.5) {
+    $a5 = "A";
+  } elseif ($_POST['ips_3'] >= 3 && $_POST['ips_3'] <= 3.5) {
+    $a5 = "B";
+  } elseif ($_POST['ips_3'] >= 2.5 && $_POST['ips_3'] < 3) {
+    $a5 = "C";
+  } elseif ($_POST['ips_3'] >= 2 && $_POST['ips_3'] < 2.5) {
+    $a5 = "D";
+  } elseif ($_POST['ips_3'] < 2) {
+    $a5 = "E";
+  }
+
+// IPS 4
+  if ($_POST['ips_4'] > 4) {
+    echo "<p style='color:red;'>Error: IP Semester 4 tidak valid</p>";
+    return false;
+  } elseif ($_POST['ips_4'] > 3.5) {
+    $a6 = "A";
+  } elseif ($_POST['ips_4'] >= 3 && $_POST['ips_4'] <= 3.5) {
+    $a6 = "B";
+  } elseif ($_POST['ips_4'] >= 2.5 && $_POST['ips_4'] < 3) {
+    $a6 = "C";
+  } elseif ($_POST['ips_4'] >= 2 && $_POST['ips_4'] < 2.5) {
+    $a6 = "D";
+  } elseif ($_POST['ips_4'] < 2) {
+    $a6 = "E";
+  }
+
+// IPS 5
+  if ($_POST['ips_5'] > 4) {
+    echo "<p style='color:red;'>Error: IP Semester 4 tidak valid</p>";
+    return false;
+  } elseif ($_POST['ips_5'] > 3.5) {
+    $a7 = "A";
+  } elseif ($_POST['ips_5'] >= 3 && $_POST['ips_5'] <= 3.5) {
+    $a7 = "B";
+  } elseif ($_POST['ips_5'] >= 2.5 && $_POST['ips_5'] < 3) {
+    $a7 = "C";
+  } elseif ($_POST['ips_5'] >= 2 && $_POST['ips_5'] < 2.5) {
+    $a7 = "D";
+  } elseif ($_POST['ips_5'] < 2) {
+    $a7 = "E";
+  }
+
+// IP Kumulatif
+  if ($_POST['ip_kumulatif'] > 4) {
+    echo "<p style='color:red;'>Error: IP Semester 4 tidak valid</p>";
+    return false;
+  } elseif ($_POST['ip_kumulatif'] > 3.5) {
+    $a8 = "A";
+  } elseif ($_POST['ip_kumulatif'] >= 3 && $_POST['ip_kumulatif'] <= 3.5) {
+    $a8 = "B";
+  } elseif ($_POST['ip_kumulatif'] >= 2.5 && $_POST['ip_kumulatif'] < 3) {
+    $a8 = "C";
+  } elseif ($_POST['ip_kumulatif'] >= 2 && $_POST['ip_kumulatif'] < 2.5) {
+    $a8 = "D";
+  } elseif ($_POST['ip_kumulatif'] < 2) {
+    $a8 = "E";
+  }
+  
 
 //TRUE
 $jk = $obj->probJenisKelamin($a1,1);

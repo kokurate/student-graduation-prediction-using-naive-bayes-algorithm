@@ -96,26 +96,14 @@ if (!isset($_SESSION["user"])) {
 
           <div class="form-group">
             <label for="jkelamin">IP Semester 1 :</label>
-            <select name="ip_sem1" id="ip_sem1" class="form-control selBox" required="required">
-                      <option value="" disabled selected>-- IP Semester 1 --</option>
-                      <option value="A">A ( IP > 3.5 )</option>
-                      <option value="B">B ( 3 ≤ IP ≤ 3.5 )</option>
-                      <option value="C">C ( 2.5 ≤ IP < 3)</option>
-                      <option value="D">D ( 2 ≤ IP < 2.5)</option>
-                      <option value="E">E ( IP < 2)</option>
-                  </select>
+            <input name="ip_sem1" id="ip_sem1" class="form-control selBox" required>
+
+
           </div>
 
           <div class="form-group">
             <label for="jkelamin">IP Semester 2 :</label>
-            <select name="ip_sem2" id="ip_sem2" class="form-control selBox" required="required">
-            <option value="" disabled selected>-- IP Semester 2 --</option>
-                      <option value="A">A ( IP > 3.5 )</option>
-                      <option value="B">B ( 3 ≤ IP ≤ 3.5 )</option>
-                      <option value="C">C ( 2.5 ≤ IP < 3)</option>
-                      <option value="D">D ( 2 ≤ IP < 2.5)</option>
-                      <option value="E">E ( IP < 2)</option>
-                  </select>
+            <input name="ip_sem2" id="ip_sem2" class="form-control selBox" required>
           </div>
 
 
@@ -124,49 +112,21 @@ if (!isset($_SESSION["user"])) {
       <div class="col-6">
       <div class="form-group">
             <label for="jkelamin">IP Semester 3  :</label>
-            <select name="ip_sem3" id="ip_sem3" class="form-control selBox" required="required">
-            <option value="" disabled selected>-- IP Semester 3 --</option>
-                      <option value="A">A ( IP > 3.5 )</option>
-                      <option value="B">B ( 3 ≤ IP ≤ 3.5 )</option>
-                      <option value="C">C ( 2.5 ≤ IP < 3)</option>
-                      <option value="D">D ( 2 ≤ IP < 2.5)</option>
-                      <option value="E">E ( IP < 2)</option>
-                  </select>
+            <input name="ip_sem3" id="ip_sem3" class="form-control selBox" required="required">
           </div>
 
           <div class="form-group">
             <label for="jkelamin">IP Semester 4  :</label>
-            <select name="ip_sem4" id="ip_sem4" class="form-control selBox" required="required">
-            <option value="" disabled selected>-- IP Semester 4 --</option>
-                       <option value="A">A ( IP > 3.5 )</option>
-                      <option value="B">B ( 3 ≤ IP ≤ 3.5 )</option>
-                      <option value="C">C ( 2.5 ≤ IP < 3)</option>
-                      <option value="D">D ( 2 ≤ IP < 2.5)</option>
-                      <option value="E">E ( IP < 2)</option>
-                  </select>
+            <input name="ip_sem4" id="ip_sem4" class="form-control selBox" required="required">
           </div>
         <div class="form-group">
             <label for="jkelamin">IP Semester 5  :</label>
-            <select name="ip_sem5" id="ip_sem5" class="form-control selBox" required="required">
-            <option value="" disabled selected>-- IP Semester 5 --</option>
-                      <option value="A">A ( IP > 3.5 )</option>
-                      <option value="B">B ( 3 ≤ IP ≤ 3.5 )</option>
-                      <option value="C">C ( 2.5 ≤ IP < 3)</option>
-                      <option value="D">D ( 2 ≤ IP < 2.5)</option>
-                      <option value="E">E ( IP < 2)</option>
-                  </select>
+            <input name="ip_sem5" id="ip_sem5" class="form-control selBox" required="required">
           </div>
 
           <div class="form-group">
             <label for="jkelamin">IPK  :</label>
-            <select name="ip_kum" id="ip_kum" class="form-control selBox" required="required">
-            <option value="" disabled selected>-- IP Kumulatif --</option>
-                      <option value="A">A ( IP > 3.5 )</option>
-                      <option value="B">B ( 3 ≤ IP ≤ 3.5 )</option>
-                      <option value="C">C ( 2.5 ≤ IP < 3)</option>
-                      <option value="D">D ( 2 ≤ IP < 2.5)</option>
-                      <option value="E">E ( IP < 2)</option>
-                  </select>
+            <input name="ip_kum" id="ip_kum" class="form-control selBox" required="required">
           </div>
 
         
@@ -247,6 +207,8 @@ if (!isset($_SESSION["user"])) {
     var ips_5 = $("#ip_sem5").val();
     var ip_kumulatif = $("#ip_kum").val();
 
+   
+
     //validasi
     var jk = document.getElementById("jkelamin");
     var bea = document.getElementById("beas");
@@ -256,6 +218,7 @@ if (!isset($_SESSION["user"])) {
     var ips4 = document.getElementById("ip_sem4");
     var ips5 = document.getElementById("ip_sem5");
     var ipk = document.getElementById("ip_kum");
+
 
     if(jk.selectedIndex == 0){
       alert("Jenis Kelamin Tidak Boleh Kosong");
@@ -267,36 +230,43 @@ if (!isset($_SESSION["user"])) {
       return false;
     }
 
-    if(ips1.selectedIndex == 0){
-      alert("IP Semester 1 Tidak Boleh Kosong");
-      return false;
-    }
+    // IPS 1
+      if (ips_1.trim() == "") {
+          alert("IP Semester 1 Tidak Boleh Kosong");
+          return false;
+      }
 
-    if(ips2.selectedIndex == 0){
-      alert("IP Semester 2 Tidak Boleh Kosong");
-      return false;
-    }
+    // IPS 2
+      if (ips_2.trim() == "") {
+          alert("IP Semester 2 Tidak Boleh Kosong");
+          return false;
+      }
 
-    if(ips3.selectedIndex == 0){
-      alert("IP Semester 3 Tidak Boleh Kosong");
-      return false;
-    }
+    // IPS 3
+      if (ips_3.trim() == "") {
+          alert("IP Semester 3 Tidak Boleh Kosong");
+          return false;
+      }
 
-    if(ips4.selectedIndex == 0){
-      alert("IP Semester 4 Tidak Boleh Kosong");
-      return false;
-    }
+    // IPS 4
+      if (ips_4.trim() == "") {
+          alert("IP Semester 4 Tidak Boleh Kosong");
+          return false;
+      }
 
-    if(ips5.selectedIndex == 0){
-      alert("IP Semester 5 Tidak Boleh Kosong");
-      return false;
-    }
+    // IPS 5
+      if (ips_5.trim() == "") {
+          alert("IP Semester 5 Tidak Boleh Kosong");
+          return false;
+      }
 
-    if(ipk.selectedIndex == 0){
-      alert("IP Kumulatif Tidak Boleh Kosong");
-      return false;
-    }
+    // IPS Kumulatif
+      if (ip_kumulatif.trim() == "") {
+          alert("IP Kumulatif Tidak Boleh Kosong");
+          return false;
+      }
 
+    
     //batas validasi
 
       $.ajax({
