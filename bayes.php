@@ -236,6 +236,11 @@ class Bayes
 
   function perbandingan($pATrue,$pAFalse)
   {
+    // Harus define variablenya kalau tidak ipk < 2.5 akan error 
+    $stt = "";
+    $hitung = 0;
+    $diterima = 0;
+  
     if($pATrue > $pAFalse){
       $stt = "LULUS TEPAT WAKTU";
       $hitung = ($pATrue / ($pATrue + $pAFalse)) * 100;

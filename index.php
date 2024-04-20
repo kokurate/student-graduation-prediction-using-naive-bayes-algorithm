@@ -124,10 +124,10 @@ if (!isset($_SESSION["user"])) {
             <input name="ip_sem5" id="ip_sem5" class="form-control selBox" required="required">
           </div>
 
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="jkelamin">IPK  :</label>
             <input name="ip_kum" id="ip_kum" class="form-control selBox" required="required">
-          </div>
+          </div> -->
 
         
       </div>
@@ -205,7 +205,7 @@ if (!isset($_SESSION["user"])) {
     var ips_3 = $("#ip_sem3").val();
     var ips_4 = $("#ip_sem4").val();
     var ips_5 = $("#ip_sem5").val();
-    var ip_kumulatif = $("#ip_kum").val();
+    // var ip_kumulatif = $("#ip_kum").val();
 
    
 
@@ -217,7 +217,7 @@ if (!isset($_SESSION["user"])) {
     var ips3 = document.getElementById("ip_sem3");
     var ips4 = document.getElementById("ip_sem4");
     var ips5 = document.getElementById("ip_sem5");
-    var ipk = document.getElementById("ip_kum");
+    // var ipk = document.getElementById("ip_kum");
 
 
     if(jk.selectedIndex == 0){
@@ -260,11 +260,11 @@ if (!isset($_SESSION["user"])) {
           return false;
       }
 
-    // IPS Kumulatif
-      if (ip_kumulatif.trim() == "") {
-          alert("IP Kumulatif Tidak Boleh Kosong");
-          return false;
-      }
+    // // IPS Kumulatif
+    //   if (ip_kumulatif.trim() == "") {
+    //       alert("IP Kumulatif Tidak Boleh Kosong");
+    //       return false;
+    //   }
 
     
     //batas validasi
@@ -274,7 +274,8 @@ if (!isset($_SESSION["user"])) {
         type : 'POST',
         dataType : 'html',
         data : {jenis_kelamin : jenis_kelamin , beasiswa : beasiswa , ips_1 : ips_1 , ips_2 : ips_2 , ips_3 : ips_3, ips_4 : ips_4, 
-                ips_5 : ips_5, ip_kumulatif : ip_kumulatif},
+                // ips_5 : ips_5, ip_kumulatif : ip_kumulatif},
+                ips_5 : ips_5},
         success : function(data){
           document.getElementById("hasilSIM").innerHTML = data;
         },

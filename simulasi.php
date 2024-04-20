@@ -111,20 +111,52 @@ $a2 = $_POST['beasiswa'];
   }
 
 // IP Kumulatif
-  if ($_POST['ip_kumulatif'] > 4) {
-    echo "<p style='color:red;'>Error: IP Semester 4 tidak valid</p>";
+  // if ($_POST['ip_kumulatif'] > 4) {
+  //   echo "<p style='color:red;'>Error: IP Semester 4 tidak valid</p>";
+  //   return false;
+  // } elseif ($_POST['ip_kumulatif'] > 3.5) {
+  //   $a8 = "A";
+  // } elseif ($_POST['ip_kumulatif'] >= 3 && $_POST['ip_kumulatif'] <= 3.5) {
+  //   $a8 = "B";
+  // } elseif ($_POST['ip_kumulatif'] >= 2.5 && $_POST['ip_kumulatif'] < 3) {
+  //   $a8 = "C";
+  // } elseif ($_POST['ip_kumulatif'] >= 2 && $_POST['ip_kumulatif'] < 2.5) {
+  //   $a8 = "D";
+  // } elseif ($_POST['ip_kumulatif'] < 2) {
+  //   $a8 = "E";
+  // }
+
+  // Check Jika semua IPS sudah ada nilainya
+  if (isset($_POST['ips_1'], $_POST['ips_2'] , $_POST['ips_3'], $_POST['ips_4'] , $_POST['ips_5'])) {
+      // hitung rata-rata
+      $avg_ipk = ($_POST['ips_1'] + $_POST['ips_2'] + $_POST['ips_3'] + $_POST['ips_4'] + $_POST['ips_5']) / 5;
+      // buatkan menjadi 2 desimal
+      // $avg_ipk = round($ipk, 2);
+      
+      // Check IPK and convert to huruf
+      if ($avg_ipk > 3.5 && $avg_ipk <= 4) {
+          $a8 = "A";
+        } 
+      elseif ($avg_ipk >= 3 && $avg_ipk <= 3.5) {
+          $a8 = "B";
+        }
+      elseif ($avg_ipk >= 2.5 && $avg_ipk < 3) {
+          $a8 = "C";
+        }
+      elseif ($avg_ipk >= 2 && $avg_ipk < 2.5) {
+          $a8 = "D";
+        }
+      elseif ($avg_ipk < 2) {
+          $a8 = "E";
+        }
+
+
+  } else {
+    // Handle kalo IPS belum terisi semua
+    echo "<p style='color:red;'>Error: IP Semester ada yang belum diisi</p>";
     return false;
-  } elseif ($_POST['ip_kumulatif'] > 3.5) {
-    $a8 = "A";
-  } elseif ($_POST['ip_kumulatif'] >= 3 && $_POST['ip_kumulatif'] <= 3.5) {
-    $a8 = "B";
-  } elseif ($_POST['ip_kumulatif'] >= 2.5 && $_POST['ip_kumulatif'] < 3) {
-    $a8 = "C";
-  } elseif ($_POST['ip_kumulatif'] >= 2 && $_POST['ip_kumulatif'] < 2.5) {
-    $a8 = "D";
-  } elseif ($_POST['ip_kumulatif'] < 2) {
-    $a8 = "E";
   }
+
   
 
 //TRUE
@@ -184,7 +216,7 @@ echo "
   <li class='list-group-item'>IP Semester 3 : &nbsp;&nbsp;<b>$a5</b></li>
   <li class='list-group-item'>IP Semester 4 : &nbsp;&nbsp;<b>$a6</b></li>
   <li class='list-group-item'>IP Semester 5 : &nbsp;&nbsp;<b>$a7</b></li>
-  <li class='list-group-item'>IP Kumulatif : &nbsp;&nbsp;<b>$a8</b></li>
+  <li class='list-group-item'>IP Kumulatif : &nbsp;&nbsp;<b>$a8 ($avg_ipk)</b></li>
   </ul>
 </div><br>
 <hr>
